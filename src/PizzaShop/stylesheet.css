@@ -1,0 +1,581 @@
+
+@font-face { font-family: 'pizza-schrift';
+    src: url('src\PizzaShop\fonts\Oxygen-Regular.ttf')  format('truetype'),
+         url('src\PizzaShop\fonts\Oxygen-Bold.ttf')  format('truetype');
+}
+
+
+/*Standardwerte*/
+html, body{
+
+    font-family: pizza-schrift;
+    color: #f1f1f1;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('src\PizzaShop\images\bgR3x2.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header, section, footer {display: block;}
+
+header{
+    top:0;
+    padding-left: 7%;
+    padding-right: 7%;
+
+    height: 10%;
+    width: 86%;
+
+    vertical-align: top;
+
+    position: sticky !important;
+    overflow: hidden;
+    z-index: 1001;
+    background-color: rgb(0, 51, 75);
+
+    border-bottom-style: solid;
+    border-bottom-width: 0.3em;
+    border-bottom-color: #f1f1f1;
+
+    border-bottom-left-radius: 2.5em;
+    border-bottom-right-radius: 2.5em;
+}
+
+.main{
+    background: rgba(0, 0, 0, 0.5);
+
+    position: relative !important;
+    overflow: visible;
+    top:5%;
+    width: auto;
+    height: fit-content;
+    padding-top: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    margin-top: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+
+    border-radius: 1em;
+}
+
+a{  /*NUR FÜR UEBERSICHT.HTML*/
+    color: white;
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 0.3em;
+    border-bottom-color: #f1f1f1;
+}
+
+h1, h2, h3, h4, h5, h6 {color: #f1f1f1;
+    position: static;
+    text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    }
+
+h1{position: sticky;
+    font-size: 3em;
+    white-space: nowrap;
+    padding-top: 0;
+    margin-top: 0.25em;
+}
+        
+
+h2{font-size: x-large;
+    border-bottom: solid 0.1em  #f1f1f1;
+    text-align: center;
+    margin-top: 0em;
+    padding-top: 0.5em;
+}
+
+h3{
+    /* Fuer Fahrer/Lieferung */
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 1em;
+    border-width: 5em;
+    width: fit-content;
+    text-align: right;
+    padding: 1em;
+    margin: 0.5em;
+    float: right;
+}
+
+p{
+    color: #f1f1f1;
+}
+
+
+a{  /*NUR FÜR UEBERSICHT.HTML*/
+    color: white;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav {
+    width:100%;
+    height: fit-content;
+    margin: 0em;
+    padding: 0em;
+
+    font-size: larger;
+    box-sizing: border-box;
+  }
+
+/*
+ul{
+    list-style: none;
+    display: flex;
+    margin-left: 0;
+    justify-content: start;
+}
+
+li{
+    margin-left: 0;
+    padding-left: 5px;
+}*/
+
+.pizzamenu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.article{
+    background: rgba(0, 51, 75, 0.5);
+    padding-top: 0.25em;
+    margin:0.5em;
+    text-align: center;
+
+    flex-grow: 1;
+    width: 11%;
+    min-width: 15em;
+    height: 20em;
+
+    box-sizing: border-box;
+    padding: 0.25em;
+    border-style: solid;
+    border-radius: 1em;
+    border-color: #f1f1f1;
+    position: relative;
+}
+
+.article img:hover{
+    transform: rotate(360deg);
+}
+
+.article img{
+    transition: transform .5s;
+    border-radius: 2em 2em 2em 2em;
+}
+
+.article:hover{
+    transform: scale(1.1);
+}
+
+.article{
+    transition: transform .5s;
+    border-radius: 2em 2em 2em 2em;
+}
+
+.shoppingcart{
+    font-family: pizza-schrift;
+    height: fit-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+select{
+    background: rgba(255, 255, 255, 0.0);
+    background-image: url('/src/PizzaShop/images/warenkorb_dark.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    box-sizing: border-box;
+    border-style: groove;
+    border-width: 0.2em;
+    border-radius: 1em;
+    border-color: white;
+    overflow-y:auto;
+    overflow-x:auto;
+    font-family: pizza-schrift;
+    font-size: medium;
+    color: white;
+    position: relative;
+    padding: 0.25em;
+    margin: 0.5em;
+
+    flex-grow: 1;
+    width: 30%;
+    min-width: 15em;
+    height: 10em;
+
+    overflow: auto;
+}
+
+
+option{
+    margin: 0.5em;
+    border-style: solid;
+    border-width: 0.2em;
+    border-radius: 0.5em;
+    border-color: white;
+    text-align: center;
+    background-color: rgba(0, 70, 102, 0.8);
+}
+
+option:hover{
+    background: rgba(0, 51, 75, 0.5);
+}
+
+.addressPrice{
+    flex-grow: 1;
+    width: 30%;
+    min-width: 15em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top:0;
+    padding-top:0;
+}
+
+#adresse{
+        background-color: rgba(255, 255, 255, 0.7);
+        border-style: solid;
+        border-width: 0.2em;
+        border-radius: 1em;
+        border-color: white;
+        overflow-y:auto;
+        overflow-x:auto;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2em;
+        padding: 0.25em;
+        margin: 0.5em;
+        height: 5em;
+}
+
+.shoppingcart p{
+    background: rgba(63, 0, 0, 0.7);
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 0.2em;
+    border-radius: 1em;
+    border-color: white;
+    overflow-y:auto;
+    overflow-x:auto;
+    font-family: pizza-schrift;
+    font-size: medium;
+    color: white;
+    text-align: right;
+
+    padding: 0.25em;
+    margin: 0.5em;
+}
+
+.buttons{
+    flex-grow: 1;
+    width: 30%;
+    min-width: 15em;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    background-color: rgba(0, 70, 102, 0.8);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6em;
+    box-sizing: border-box;
+    border-style: groove;
+    border-radius: 1em;
+    border-color: #f1f1f1;
+
+    padding: 0.25em;
+    margin: 0.5em;
+}
+
+input:hover{
+    background-color: rgba(3, 17, 24, 0.8);
+}
+
+#sendBestellung:disabled{
+    background-color: grey;
+}
+
+footer {
+    bottom:0em;
+    position:absolute !important;
+    text-align: left;
+
+    height:3%;
+    width:100%;
+  }
+
+/*FAHRER SEITE*/
+.deliveryDuty{
+    background-color: rgba(0, 70, 102, 0.8);
+    width: 100%;
+    border-radius: 1em;
+    border-width: 5em;
+    padding: 0.5em;
+    margin:0.25em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 50% 48%;
+    grid-auto-rows: auto;
+}
+
+.aAddress{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.aPizzas{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+/*
+.radio-toolbar{
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-left: solid 1px #f1f1f1;
+    padding-left: 2vw;
+}
+
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    min-width: fit-content;
+    width: 0;
+  }
+
+.radio-toolbar input[type="radio"]:checked{
+    background-color: red;
+}
+
+.radio-toolbar label {
+    background-color: rgba(0, 70, 102, 0.7);
+    padding: 10px 20px;
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid #f1f1f1;
+    border-radius: 4px;
+
+    min-width: 5em;
+    display: inline-block;
+}
+
+.radio-toolbar label:hover {
+    color: black;
+    background-color: #f1f1f1;
+  }
+
+.radio-toolbar input[type="radio"]:focus + label {
+    border: 2px dashed #444;
+}
+
+.radio-toolbar input[type="radio"]:checked{
+    background-color:#bfb;
+}*/
+
+/*SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 1.5em;
+    height: 90em;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: grey;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(3, 17, 24, 1);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgba(0, 70, 102, 1);
+}
+
+
+/*MEDIA-QUERIES*/
+
+@media screen and (max-width: 1200px){
+    .article{
+        width: 23%;
+    }
+    
+    .radio-toolbar{
+        flex-direction: column;
+    }
+
+    .radio-toolbar label{
+        display: grid;
+    }
+}
+
+@media screen and (max-width: 900px){
+    body{
+        overflow: auto;
+    }
+
+    header{
+        height: 11vw;
+    }
+
+    h1{
+    font-size: 5.3vw;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: center;
+    vertical-align:middle;
+    }
+
+    .main{
+        padding-top:0;
+        top:5%;
+        margin-top:0;
+    }
+
+    .pizzamenu{
+        top:10%;
+        padding-top:0;
+        margin-top:0;
+    }
+
+    select{
+        width: 45%;
+    }
+
+    .addressPrice{
+        width: 45%;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #specificLoeschen{
+        width: fit-content;
+    } 
+
+    #alleLoeschen{
+        width: 20%;
+        min-width: fit-content;
+    }
+
+    #sendBestellung{
+        width: 47%;
+        min-width: fit-content;
+    }  
+
+    footer{
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 600px){ 
+    body{
+        overflow: auto;
+    }
+}
+@media screen and (max-width: 550px){ 
+
+    .buttons{
+        flex-direction: column;
+        margin-right: 2%;
+    }
+
+    #specificLoeschen{
+        width: 100%;
+        min-width: fit-content;
+    } 
+
+    #alleLoeschen{
+        width: 100%;
+        min-width: fit-content;
+    }
+
+    #sendBestellung{
+        width: 100%;
+        min-width: fit-content;
+    } 
+
+    /*FAHRER*/
+
+    .deliveryDuty{
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+    }
+
+    .radio-toolbar{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        border-left: none;
+        border-top: solid 0.1em #f1f1f1;
+        padding-top: 1.0em;
+        padding-left: 0;
+        height: fit-content;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .radio-toolbar label{
+        display: grid;
+        padding: 0.5em 0.1em;
+        margin: 0.5em;
+        text-align: center;
+    }
+
+}
